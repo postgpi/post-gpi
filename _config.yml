@@ -1,2 +1,14 @@
+url: https://www.globalprioritiesinstitute.org   # your canonical (www) URL
+baseurl: ""                                       # empty for a root-domain site
+
 plugins:
-  - jekyll-redirect-from
+  - jekyll-redirect-from   # you already use this
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Keep redirect stubs out of the sitemap (and out of search)
+defaults:
+  - scope:
+      path: "redirects/"     # folder where your redirect pages live
+    values:
+      sitemap: false
